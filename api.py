@@ -8,7 +8,7 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "Tiago Peres' approach to Salsify Line Server Problem"}
 
 
 @app.get("/lines/{line_index}")
