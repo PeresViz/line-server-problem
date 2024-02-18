@@ -17,9 +17,14 @@ class LineRepository:
         """
         try:
             with open(self.file_name, 'r') as file:
-                lines = file.readlines()
-                if index < len(lines):
-                    return lines[index]
+                # Iterate over the file until reaching the desired line index
+                line_num = 0
+                for line in file:
+                    if line.strip():  # Skip blank lines
+                        if line_num == index:
+                            return line.rstrip('\n')  # Remove newline character before returning
+                        line_num += 1
+                # Return None if the index is beyond the end of the file
                 return None
         except FileNotFoundError:
             # Handle file not found error
