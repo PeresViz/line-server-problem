@@ -17,12 +17,14 @@ class LineRepository:
         """
         try:
             with open(self.file_name, 'r') as file:
-                # Iterate over the file until reaching the desired line index
+                # Iterate over the file, keeping track of both blank and non-blank lines
                 line_num = 0
                 for line in file:
-                    if line.strip():  # Skip blank lines
+                    if line.strip() or line == '\n':  # Include blank lines in line numbering
                         if line_num == index:
-                            return line.rstrip('\n')  # Remove newline character before returning
+                            return line.rstrip('\n') \
+                                if line != "\n" \
+                                else line  # distinguish between blank line and end of file
                         line_num += 1
                 # Return None if the index is beyond the end of the file
                 return None
