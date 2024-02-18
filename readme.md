@@ -9,6 +9,8 @@ The line index starts with 0. This means that the first line of file corresponds
 
 ## Running the system
 
+First and before anything else, you need to clone this repo.
+
 For running the system you simply need to run the following command in your terminal:
 
 `
