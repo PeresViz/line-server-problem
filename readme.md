@@ -2,18 +2,19 @@
 
 ## How does this system work?
 
-This system exposes a REST API that return a line given its index inside a given text file. 
+This system exposes a REST API that returns a line given its index inside a given text file. 
 The API endpoint `/lines/<line index>` accepts a line index and returns the corresponding line from the text file.
 The system will consider all the lines (even blank ones).
 The line index starts with 0. This means that the first line of file corresponds to the index 0.
 
-## Building the system
+## Running the system
 
-For building the system you simply need to run the following command in your terminal:
+For running the system you simply need to run the following command in your terminal:
 
 `
 ./run.sh <name_of_text_file>.txt
 `
+That command will build and run the system automatically.
 
 You might need to add sudo to the command.
 
@@ -53,7 +54,7 @@ These libraries and tools were chosen based on their popularity, community suppo
 I've spent about 3h in this exercise.
 Some of the time was used deciding about the file line reading approach and whether blank lines should be consider and line indexes preserved.
 
-If I would spend more time I would do the following:
+If I had spent more time I would do the following:
 - Add unit tests. I know I could use TDD approach here but I'm not yet still 100% confortable with it so I didn't want to take much time on it for this specific situation.
 - Add api tests. Add a test that explicitly makes a request to the `/lines/<line index>` endpoint to see if it behaves as expected
 - Take a better look at the project structure. I aimed to use a DDD approach but it has not quite the "ideal" design for it.
