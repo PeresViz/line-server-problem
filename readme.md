@@ -62,4 +62,9 @@ I would for example assess if an entity folder could be created inside the domai
 the repository would need to be created
 - I would try to improve my approach for reading the lines of the file. I decided to go not for the memory-heavy approach 
 because of the larger files but having a loop can affect the performance.
+- I would also probably isolate the API controller definition (what's inside api.py) inside `api/controller`
+and would only leave the starting of the application inside a main.py file.
+I didn't initially do this because this system is only exposing two endpoints. However, it is usually not a good practice
+to leave the api controllers with the system starter (tends to create too much coupling).
+I have added this last comment after the 3h so if you don't think its valid feel free to discard it.
 
