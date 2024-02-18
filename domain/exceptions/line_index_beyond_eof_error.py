@@ -1,0 +1,2 @@
+class LineIndexBeyondEOFError(Exception):
+    pass
