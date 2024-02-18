@@ -58,7 +58,8 @@ If I had spent more time I would do the following:
 - Add unit tests. I know I could use TDD approach here but I'm not yet still 100% confortable with it so I didn't want to take much time on it for this specific situation.
 - Add api tests. Add a test that explicitly makes a request to the `/lines/<line index>` endpoint to see if it behaves as expected
 - Take a better look at the project structure. I aimed to use a DDD approach but it has not quite the "ideal" design for it.
-I would for example assess if an entity folder could be created inside the domain layer to hold the line entity structure.
+I would for example assess if an entity folder could be created inside the domain layer to hold the line entity structure or if an interface for
+the repository would need to be created
 - I would try to improve my approach for reading the lines of the file. I decided to go not for the memory-heavy approach 
 because of the larger files but having a loop can affect the performance.
 
